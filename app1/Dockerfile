@@ -11,7 +11,7 @@ RUN a2enmod rewrite
 COPY . /var/www/html
 
 # Corrige permissões
-RUN chow -R www-data:www-data /var/www/html && chmod -R 755 /var/www/html
+RUN chown -R www-data:www-data /var/www/html && chmod -R 755 /var/www/html
 
 # Corrige configurações da porta
 RUN sed -i "s/Listen 80/Listen ${PORT}/" /etc/apache2/ports.conf && \
