@@ -29,4 +29,3 @@ EXPOSE ${PORT}
 
 # Inicia o Apache em primeiro plano
 CMD ["apache2-foreground"]
-
